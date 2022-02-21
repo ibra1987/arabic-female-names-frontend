@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const singlePost = ({ post, notFound }) => {
+const SinglePost = ({ post, notFound }) => {
   const [imageSource, setImageSource] = useState("");
   useEffect(() => {
     getFeaturedImage(post.featured_media);
@@ -47,7 +47,7 @@ const singlePost = ({ post, notFound }) => {
   );
 };
 
-export default singlePost;
+export default SinglePost;
 
 export async function getServerSideProps(context) {
   const slug = context.params.slug;

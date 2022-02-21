@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const femaleNamesList = ({ names }) => {
+const FemaleNamesList = ({ names }) => {
   const router = useRouter();
   const { startswith } = router.query;
 
@@ -111,7 +111,7 @@ const femaleNamesList = ({ names }) => {
   );
 };
 
-export default femaleNamesList;
+export default FemaleNamesList;
 
 export async function getServerSideProps() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/female-names`);
